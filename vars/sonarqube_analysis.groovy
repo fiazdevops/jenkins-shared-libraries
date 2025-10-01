@@ -1,8 +1,8 @@
-def call(String Sonar, String imageName, String imageName){ 
-  withSonarQubeEnv('Sonar') {
+def call(String SonarQubeAPI, String Projectname, String ProjectKey){ 
+  withSonarQubeEnv("${SonarQubeAPI}") {
                     sh """
                         ${SONAR_HOME}/bin/sonar-scanner \
-                        -Dsonar.projectName=${imageName} \
-                        -Dsonar.projectKey=${imageName}
+                        -Dsonar.projectName=${Projectname} \
+                        -Dsonar.projectKey=${ProjectKey}
                     """
 }
