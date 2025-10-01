@@ -5,4 +5,5 @@ def call(String SonarInstanceName, String Projectname, String ProjectKey){
                         -Dsonar.projectName=${Projectname} \
                         -Dsonar.projectKey=${ProjectKey}
                     """
+  }
 }
